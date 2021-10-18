@@ -24,6 +24,7 @@ RUN python3 /code/models/resnet/resnet.py \
 WORKDIR /code/inference-cpp/cnn-classification
 RUN ./build.sh && mv predict /assets
 
+
 FROM ubuntu:18.04
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         libopencv-dev \
